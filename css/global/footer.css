@@ -4,7 +4,7 @@
 
 .footer {
   display: grid;
-  grid-template-columns: 3fr 5fr 4fr;
+  grid-template-columns: 2fr 5fr 5fr;
   gap: 40px;
   padding: 60px 20px;
 }
@@ -45,9 +45,10 @@
 }
 
 @media (max-width: 800px) {
-  .footer > img {
+  .footer>img {
     display: none;
   }
+
   .footer {
     grid-template-columns: 1fr 1fr;
   }
@@ -58,6 +59,7 @@
     grid-template-columns: 1fr;
     gap: 60px;
   }
+
   .footer-copy {
     margin-top: 0px;
   }
