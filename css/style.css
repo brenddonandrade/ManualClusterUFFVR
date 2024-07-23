@@ -18,6 +18,7 @@
 
 /* Manual */
 @import "./manual/selecionar-cluster.css";
+@import "./manual/manual-cluster.css";
 
 /* termos e condicoes */
 @import "./termos/termos.css";

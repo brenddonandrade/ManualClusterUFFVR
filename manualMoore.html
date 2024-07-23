@@ -23,7 +23,7 @@
   </script>
 </head>
 
-<body id="manual">
+<body id="manualMoore">
   <header class="container">
     <div class="header">
       <a href="./"><img src="./img/home/CEMUCAD.svg" width="136" height="32" alt="Cemucad"></a>
@@ -43,12 +43,10 @@
   <main>
 
     <section class="selecionar-cluster container fadeInDown" data-anime="200" id="selection-cluster" aria-label="Nossos Clusters">
-      <h1 class="font-1-xxl cor-12">Manual | CEMUCAD</h1>
       <h2 class="font-1-xl">Selecione sua máquina:</h2>
-
       <div class="selecionar-cluster-content">
-        <div class="item-selecionar ativo">
-          <a class="font-1-l cor-10" href="./manualMoore.html">Moore</a>
+        <div class="item-selecionar moore">
+          <a class="font-1-l cor-1" href="#">Moore</a>
         </div>
         <div class="item-selecionar">
           <a class="font-1-l cor-10 " href="./manualMurilinho.html">Murilinho</a>
@@ -62,20 +60,47 @@
           <a class="font-1-l cor-10 " href="./manualMildred.html">Mildred</a>
         </div>
 
-
-
         <div class="item-selecionar">
           <a class="font-1-l cor-10 " href="./manualHeun.html">Heun</a>
         </div>
         <div class="item-selecionar">
           <a class="font-1-l cor-10 " href="./manualSpace.html"></a>
         </div>
-
       </div>
-
     </section>
 
+    <section class="manual-cluster js-accoridon fadeInDown" data-anime="400" id="clusterMoore">
+      <div class="manual-container container">
+        <h1 class="font-1-xxl cor-c12 ">Manual Moore</h1>
 
+        <dl class="js-accoridon">
+          <div class="script">
+            <dt class="font-1-l cor-c10">Jobs paralelos (MPI)</dt>
+            <dd>
+              <pre class="font-2-l-a cor-9 fadeInDown" data-anime="400" id="textoParaCopiar">
+#!/bin/bash
+#SBATCH --nodes=N                      #Numero de Nós
+#SBATCH --ntasks-per-node=TPN          #Numero de tarefas por Nó
+#SBATCH --ntasks=T                     #Numero total de tarefas MPI
+#SBATCH -p FILA                        #Fila (partition) a ser utilizada
+#SBATCH -J JOB			       #Nome job
+#SBATCH --exclusive                    #Utilização exclusiva dos nós durante a execução do job
+
+#Exibe os nós alocados para o Job
+echo $SLURM_JOB_NODELIST
+nodeset -e $SLURM_JOB_NODELIST
+
+cd $SLURM_SUBMIT_DIR
+
+
+              </pre>
+              <button class="botaoCopiar">Copiar</button>
+            </dd>
+          </div>
+
+        </dl>
+      </div>
+    </section>
     
 
   </main>

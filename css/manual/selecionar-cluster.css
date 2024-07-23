@@ -1,9 +1,5 @@
 .selecionar-cluster {
     padding-bottom: 64px;
-    display: grid;
-    gap: 20px;
-    grid-template-columns: 2fr 4fr 4fr 2fr;
-    justify-content: center;
 }
 
 .selecionar-cluster h1 {
@@ -16,31 +12,27 @@
 }
 
 
+.selecionar-cluster-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.moore {
+    background-color: var(--cor-10);
+}
+
 .item-selecionar {
-    max-width: 360px;
-    padding: 12px;
     border: 4px solid var(--cor-3);
     border-radius: 4px;
     justify-self: center;
 }
 
-.item-selecionar h3 {
-    margin: 12px 0px;
+
+.item-selecionar a {
+    padding: 16px 32px;
 }
-
-.item-selecionar p {
-    margin-bottom: 16px;
-    text-align: justify;
-}
-
-.item-selecionar img {
-    width: 100%;
-    height: 240px;
-    object-fit: cover;
-}
-
-
-
 
 .item-selecionar a:hover {
     color: var(--cor-8);
@@ -50,11 +42,6 @@
 
 
 @media (max-width: 800px) {
-
-    .selecionar {
-        grid-template-columns: 1fr;
-        justify-content: center;
-    }
 
     .selecionar h2 {
         margin-bottom: 16px;

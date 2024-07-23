@@ -1,4 +1,5 @@
 import initAccordion from './animacao-manual-cluseter.js';
+import initCopiar from './botao-copiar.js';
 
 
 //ativar links do menu
@@ -71,4 +72,4 @@ if (window.SimpleAnime) {
 }
 
 initAccordion();
-
+initCopiar();
