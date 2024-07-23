@@ -1,3 +1,8 @@
+.parceiros-bg {
+    background-color: var(--cor-3);
+    padding-bottom: 62px;
+}
+
 .parceiros {
     display: grid;
     grid-template-columns: 6fr 6fr;
@@ -6,9 +11,9 @@
 }
 
 .parceiros h2 {
+    margin: 32px 0px;
     grid-column: span 2;
-    justify-self: center;
-    /* padding: 60px 0; */
+    justify-self: start;
 }
 
 .img-parceiro {

@@ -1,0 +1,4 @@
+Dicas para criação:
+	
+	- Diminuir tamanho da imagem:
+		- squoosh: https://squoosh.app/

@@ -24,9 +24,9 @@
 </head>
 
 <body>
-  <header class="">
-    <div class="header container">
-      <a href="./"><img src="./img/CEMUCAD.svg" width="136" height="32" alt="Cemucad"></a>
+  <header class="container">
+    <div class="header">
+      <a href="./"><img src="./img/home/CEMUCAD.svg" width="136" height="32" alt="Cemucad"></a>
       <nav aria-label="primaria">
         <ul class="header-menu font-2-m cor-10">
           <li><a href="./comeco.html">Começo</a></li>
@@ -40,34 +40,71 @@
     </div>
   </header>
 
-  <main class="introducao-bg">
-    <section class="introducao container">
-      <div class="introducao-conteudo">
-        <h1 class="font-1-xxl cor-12 fadeInDown" data-anime="200">Centro Multiusuário de Computação de Alto Desempenho</h1>
-        <p class="font-2-l cor-8 fadeInDown" data-anime="400">Volta  Redonda - RJ.</p>
+  <main>
+
+    <section class="introducao-bg">
+      <div class="introducao container">
+        <div class="introducao-conteudo">
+          <h1 class="font-1-xxl cor-12 fadeInDown" data-anime="200">Centro Multiusuário de Computação de Alto Desempenho</h1>
+          <p class="font-2-l cor-8 fadeInDown" data-anime="400">Volta  Redonda - RJ.</p>
+        </div>
+        <picture class="fadeInDown" data-anime="800">
+          <source media="(max-width: 800px)" srcset="./img/home/bicicletas/nimbus.jpg">
+          <img src="./img/home/uffPerspectiva.jpg" width="1280" height="1600" alt="Vista em perspectiva da UFF de Volta Redonda">
+        </picture>
       </div>
-      <picture class="fadeInDown" data-anime="800">
-        <source media="(max-width: 800px)" srcset="./img/bicicletas/nimbus.jpg">
-        <img src="./img/uffPerspectiva.jpg" width="1280" height="1600" alt="Vista em perspectiva da UFF de Volta Redonda">
-      </picture>
     </section>
 
+    <section class="projetos container" aria-label="Nossos Projetos">
+      <h2 class="font-1-xxl">Projetos</h2>
 
-    <section class="parceiros container" aria-label="Nossos Parceiros">
-        <h2 class="container font-1-xxl">Parceiros</h2>
+      <div></div>
+      <div class="item-projetos">
+        <img src="./img/home/arte1.jpg" alt="Projeto 1">
+        <p class="font-2-s cor-8 fadeInDown" data-anime="400">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem necessitatibus ullam molestias vero debitis quod, laborum consequuntur, repellat saepe doloremque distinctio consequatur quas nihil, cum porro consectetur voluptatem sit dolorum.</p>
+        <a class="font-2-l cor-10 fadeInDown" href="./projeto1.html">Leia mais</a>
+      </div>
 
-        <div class="item-parceiro">
-            <div class="img-parceiro">
-                <img src="./img/logoUff.png" alt="Uff">
-            </div>
+      <div class="item-projetos">
+        <img src="./img/home/arte2.jpg" alt="Projeto 2">
+        <p class="font-2-s cor-8 fadeInDown" data-anime="400">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem necessitatibus ullam molestias vero debitis quod, laborum consequuntur, repellat saepe doloremque distinctio consequatur quas nihil, cum porro consectetur voluptatem sit dolorum.</p>
+        <a class="font-2-l cor-10 fadeInDown" href="./projeto1.html">Leia mais</a>
+      </div>
+      <div></div>
+
+      <div></div>
+
+
+      <div class="item-projetos">
+        <img src="./img/home/arte3.jpg" alt="Projeto 3">
+        <p class="font-2-s cor-8 fadeInDown" data-anime="400">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem necessitatibus ullam molestias vero debitis quod, laborum consequuntur, repellat saepe doloremque distinctio consequatur quas nihil, cum porro consectetur voluptatem sit dolorum.</p>
+        <a class="font-2-l cor-10 fadeInDown" href="./projeto1.html">Leia mais</a>
+      </div>
+
+      <div class="item-projetos">
+        <img src="./img/home/arte4.jpg" alt="Projeto 4">
+        <p class="font-2-s cor-8 fadeInDown" data-anime="400">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem necessitatibus ullam molestias vero debitis quod, laborum consequuntur, repellat saepe doloremque distinctio consequatur quas nihil, cum porro consectetur voluptatem sit dolorum.</p>
+        <a class="font-2-l cor-10 fadeInDown" href="./projeto1.html">Leia mais</a>
+      </div>
+      <div></div>
+
+    </section>
+
+    <section class="parceiros-bg" aria-label="Nossos Parceiros">
+        <div class="parceiros container" >
+          <h2 class="container font-1-xxl">Parceiros</h2>
+          <div class="item-parceiro">
+              <div class="img-parceiro fadeInDown" data-anime="800">
+                  <img src="./img/home/logoUff.png" alt="Uff">
+              </div>
+          </div>
+          <div class="item-parceiro fadeInDown" data-anime="800">
+              <div class="img-parceiro">
+                  <img src="./img/home/ICExLogo.png" alt="Icex">
+              </div>
+          </div>
         </div>
-
-        <div class="item-parceiro">
-            <div class="img-parceiro">
-                <img src="./img/ICExLogo.png" alt="Icex">
-            </div>
-        </div>
-      </section>
+    </section>
   </main>
 
 
@@ -75,7 +112,7 @@
 
   <footer class="footer-bg">
     <div class="container footer">
-      <img src="./img/CEMUCAD-white.svg" width="136" height="32" alt="Cemucad">
+      <img src="./img/home/CEMUCAD-white.svg" width="136" height="32" alt="Cemucad">
       <div class="footer-contato">
         <h3 class="font-2-l-b cor-0">Contato</h3>
         <ul class="font-2-m cor-5">
