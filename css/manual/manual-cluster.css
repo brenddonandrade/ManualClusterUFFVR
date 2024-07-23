@@ -1,0 +1,57 @@
+/* Correcoes */
+
+
+.manual-cluster {
+    padding: 60px 16px;
+}
+
+.manual-cluster h1 {
+    margin-bottom: 30px;
+}
+
+.pergunta {
+    padding: 16px;
+    cursor: pointer;
+}
+
+.pergunta:nth-child(2n) {
+    background: var(--cor-c2);
+}
+
+.pergunta dt {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.pergunta dt::after {
+    content: "↴";
+}
+
+.pergunta dt.ativo::after {
+    transform: rotateX(180deg);
+}
+
+.pergunta dd {
+    display: none;
+    margin-bottom: 20px;
+    max-width: 80ch;
+}
+
+.pergunta dd.ativo {
+    display: block;
+    animation: slideDown .5s forwards;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        max-height: 0;
+    }
+
+    to {
+        opacity: 1;
+        max-height: 300px;
+    }
+}

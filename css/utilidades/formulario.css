@@ -1,12 +1,12 @@
 .form {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 20px ;
-}       
+  gap: 20px;
+}
 
 .form label {
   display: block;
-  font: 400 1rem/1.5 "Poppins", sans-serif;
+  font: 400 1rem/1.5 "Roboto", sans-serif;
   margin-bottom: 4px;
 }
 
@@ -14,7 +14,7 @@
   grid-column: span 2;
 }
 
-.form input[type="text"], 
+.form input[type="text"],
 .form input[type="email"],
 .form textarea {
   font: 400 1rem/1.5 "Roboto", sans-serif;
@@ -26,7 +26,7 @@
   box-sizing: border-box;
 }
 
-.form input[type="text"]:focus, 
+.form input[type="text"]:focus,
 .form input[type="email"]:focus,
 .form textarea:focus {
   outline: none;

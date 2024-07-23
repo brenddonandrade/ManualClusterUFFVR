@@ -15,5 +15,9 @@
 @import "./home/projetos.css";
 @import "./home/parceiros.css";
 
+
+/* Manual */
+@import "./manual/selecionar-cluster.css";
+
 /* termos e condicoes */
 @import "./termos/termos.css";

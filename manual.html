@@ -5,7 +5,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CEMUCAD | Home</title>
+  <title>CEMUCAD | Manual</title>
   <meta name="description" content="Bicicletas elétricas de alta precisão e qualidade, feitas sob medida para você. Explore o mundo na sua velocidade com a Bikcraft.">
 
   <link rel="preload" href="./css/style.min.css" as="style">
@@ -23,7 +23,7 @@
   </script>
 </head>
 
-<body>
+<body id="manual">
   <header class="container">
     <div class="header">
       <a href="./"><img src="./img/home/CEMUCAD.svg" width="136" height="32" alt="Cemucad"></a>
@@ -34,7 +34,7 @@
           <li><a href="./storage.html">Storage</a></li>
           <li><a href="./software.html">Software</a></li>
           <li><a href="./sobre.html">Sobre</a></li>
-          <li><a class="botao" href="./manual.html">Manual</a></li>
+          <li><a class="botao" href="./index.html">Home</a></li>
         </ul>
       </nav>
     </div>
@@ -42,30 +42,21 @@
 
   <main>
 
-    <section class="introducao-bg">
-      <div class="introducao container">
-        <div class="introducao-conteudo">
-          <h1 class="font-1-xxl cor-12 fadeInDown" data-anime="200">Centro Multiusuário de Computação de Alto Desempenho</h1>
-          <p class="font-2-l cor-8 fadeInDown" data-anime="400">Volta  Redonda - RJ.</p>
-        </div>
-        <picture class="fadeInDown" data-anime="800">
-          <source media="(max-width: 800px)" srcset="./img/home/capaHome.jpeg">
-          <img src="./img/home/capaHome.jpeg" width="1280" height="1600" alt="Todos os Clusters">
-        </picture>
-      </div>
-    </section>
-
-    <section class="projetos container" aria-label="Nossos Projetos">
-      <h2 class="font-1-xxl">Projetos</h2>
+    <section class="selecionar-cluster container" id="selection-cluster" aria-label="Nossos Clusters">
+      <h1 class="font-1-xxl cor-12 fadeInDown" data-anime="200">Manual | CEMUCAD</h1>
+      <h2 class="font-1-xl">Selecione sua máquina:</h2>
 
       <div></div>
-      <div class="item-projetos">
-        <img src="./img/home/arte1.jpg" alt="Projeto 1">
+      <div class="item-selecionar">
+        <img src="./img/sistemas/moore.jpeg" alt="Cluster Moore"">
+        <h3 class="font-1-l">
+          Cluster | Moore
+        </h3>
         <p class="font-2-s cor-8 fadeInDown" data-anime="400">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem necessitatibus ullam molestias vero debitis quod, laborum consequuntur, repellat saepe doloremque distinctio consequatur quas nihil, cum porro consectetur voluptatem sit dolorum.</p>
-        <a class="font-2-l cor-10 fadeInDown" href="./projeto1.html">Leia mais</a>
+        <a class="font-2-l cor-10 fadeInDown" href="#manualMoore">Manual</a>
       </div>
 
-      <div class="item-projetos">
+      <div class="item-selecionar">
         <img src="./img/home/arte2.jpg" alt="Projeto 2">
         <p class="font-2-s cor-8 fadeInDown" data-anime="400">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem necessitatibus ullam molestias vero debitis quod, laborum consequuntur, repellat saepe doloremque distinctio consequatur quas nihil, cum porro consectetur voluptatem sit dolorum.</p>
         <a class="font-2-l cor-10 fadeInDown" href="./projeto1.html">Leia mais</a>
@@ -75,51 +66,55 @@
       <div></div>
 
 
-      <div class="item-projetos">
+      <div class="item-selecionar">
         <img src="./img/home/arte3.jpg" alt="Projeto 3">
         <p class="font-2-s cor-8 fadeInDown" data-anime="400">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem necessitatibus ullam molestias vero debitis quod, laborum consequuntur, repellat saepe doloremque distinctio consequatur quas nihil, cum porro consectetur voluptatem sit dolorum.</p>
         <a class="font-2-l cor-10 fadeInDown" href="./projeto1.html">Leia mais</a>
       </div>
 
-      <div class="item-projetos">
+      <div class="item-selecionar">
         <img src="./img/home/arte4.jpg" alt="Projeto 4">
         <p class="font-2-s cor-8 fadeInDown" data-anime="400">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem necessitatibus ullam molestias vero debitis quod, laborum consequuntur, repellat saepe doloremque distinctio consequatur quas nihil, cum porro consectetur voluptatem sit dolorum.</p>
         <a class="font-2-l cor-10 fadeInDown" href="./projeto1.html">Leia mais</a>
       </div>
       <div></div>
-
+      
     </section>
 
-    <section class="parceiros-bg" aria-label="Nossos Parceiros">
-        <div class="parceiros container" >
-          <h2 class="container font-1-xxl">Parceiros</h2>
-          <div class="item-parceiro">
-              <div class="img-parceiro fadeInDown" data-anime="800">
-                  <a href="https://www.uff.br/" target="_blank"><img src="./img/home/logoUff.png" alt="Uff"></a>
-              </div>
-          </div>
-          <div class="item-parceiro fadeInDown" data-anime="800">
-              <div class="img-parceiro padding-6px">
-                  <a href="http://icex.sites.uff.br/"><img src="./img/home/ICExLogo.png" alt="Icex"></a>
-              </div>
-          </div>
+    <section class="manual-cluster" id="clusterMoore">
+      <div class="faq-container container">
+        <h1 class="font-1-xxl cor-c11">FAQ</h1>
 
-          <div class="item-parceiro fadeInDown" data-anime="800">
-            <div class="img-parceiro">
-                <a href="https://versatushpc.com.br/" target="_blank"><img src="./img/home/logoVersatus.png" alt="Versatus"></a>
-            </div>
+        <dl class="js-accoridon">
+          <div class="pergunta">
+            <dt class="font-1-l cor-c10">O que são jogos educacionais para inclusão de crianças autistas?</dt>
+            <dd class="font-2-l-a cor-c9">São jogos criados especialmente para crianças autistas que buscam proporcionar uma experiência lúdica e inclusiva, ajudando no desenvolvimento cognitivo, motor e emocional, bem como na socialização e na autonomia.</dd>
           </div>
-
-          <div class="item-parceiro fadeInDown" data-anime="800">
-            <div class="img-parceiro padding-6px">
-                <a href="https://www.faperj.br/" target="_blank"><img src="./img/home/logoFaperj.jpg" alt="Faperj"></a>
-            </div>
+          <div class="pergunta">
+            <dt class="font-1-l cor-c10">Como esses jogos são desenvolvidos?</dt>
+            <dd class="font-2-l-a cor-c9">Os jogos são desenvolvidos com a ajuda de profissionais da área de psicologia e computação, com o intuito de serem adequados e desafiadores, mas também agradáveis e acessíveis para todas as crianças.</dd>
           </div>
-
-          
-
-        </div>
+          <div class="pergunta">
+            <dt class="font-1-l cor-c10">Quais são os benefícios desses jogos para crianças autistas?</dt>
+            <dd class="font-2-l-a cor-c9">Os jogos educacionais para inclusão de crianças autistas contribuem para o desenvolvimento cognitivo, emocional e social das crianças, além de ajudá-las a melhorar sua autonomia e habilidades motoras.</dd>
+          </div>
+          <div class="pergunta">
+            <dt class="font-1-l cor-c10">Os jogos serão gratuitos?</dt>
+            <dd class="font-2-l-a cor-c9">Sim, os jogos dos projetos serão disponibilizados gratuitamente para que todas as crianças possam ter acesso às atividades educativas e inclusivas.</dd>
+          </div>
+          <div class="pergunta">
+            <dt class="font-1-l cor-c10">Esses jogos são adequados apenas para crianças autistas?</dt>
+            <dd class="font-2-l-a cor-c9">Embora tenham sido desenvolvidos especificamente para crianças autistas, esses jogos podem ser utilizados por qualquer criança que tenha interesse em aprender e se divertir.</dd>
+          </div>
+          <div class="pergunta">
+            <dt class="font-1-l cor-c10">Onde posso encontrar esses jogos?</dt>
+            <dd class="font-2-l-a cor-c9">No site do projeto, assim que prontos para obtenção de dados, serão disponibilizados para todos que desejarem.</dd>
+          </div>
+        </dl>
+      </div>
     </section>
+    
+
   </main>
 
 
@@ -141,7 +136,7 @@
         <h3 class="font-2-l-b cor-0">Informações</h3>
         <nav>
           <ul class="font-1-m cor-5">
-            <li><a href="./manual.html">Manual</a></li>
+            <li><a href="./index.html">Home</a></li>
             <li><a href="./contato.html">Contato</a></li>
             <li><a href="./termos.html">Termos e condições</a></li>
             <li><a href="#">Retornar ao topo da página</a></li>

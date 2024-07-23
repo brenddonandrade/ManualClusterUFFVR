@@ -1,3 +1,6 @@
+import initAccordion from './animacao-manual-cluseter.js';
+
+
 //ativar links do menu
 const links = document.querySelectorAll('.header-menu a');
 
@@ -66,3 +69,6 @@ galeria.forEach(eventosGaleria);
 if (window.SimpleAnime) {
   new SimpleAnime();
 }
+
+initAccordion();
+
