@@ -18,7 +18,7 @@ Bem-vindo ao repositório do Manual do Cluster da UFF-VR. Este repositório cont
 
 ## Introdução
 
-Este manual foi criado para facilitar o uso do cluster da nossa faculdade. Aqui você encontrará informações detalhadas sobre como utilizar as diversas funcionalidades do cluster, incluindo a submissão de jobs, o uso de filas e muito mais.
+Este manual foi criado para facilitar o uso do cluster da nossa faculdade. Aqui você encontrará informações detalhadas Contas como utilizar as diversas funcionalidades do cluster, incluindo a submissão de jobs, o uso de filas e muito mais.
 
 ## Requisitos
 
@@ -43,7 +43,7 @@ Antes de começar, certifique-se de que você possui:
 
 ### Filas
 
-Nesta seção, você encontrará informações sobre como utilizar as diversas filas disponíveis no cluster. [Leia mais](docs/filas.md).
+Nesta seção, você encontrará informações Contas como utilizar as diversas filas disponíveis no cluster. [Leia mais](docs/filas.md).
 
 ### Submeter Jobs
 
