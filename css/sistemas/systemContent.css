@@ -1,0 +1,19 @@
+.systemContent {
+    display: none;
+}
+
+
+.systemContent.ativo {
+    display: grid;
+    grid-template-columns: 3fr 9fr;
+    padding: 16px;
+    border: 4px solid var(--cor-4);
+    margin-bottom: 32px;
+    animation: slideDown .5s forwards;
+}
+
+.systemConfig {
+    border-left: 4px solid var(--cor-4);
+    padding-left: 16px;
+    background-color: var(--cor-2);
+}

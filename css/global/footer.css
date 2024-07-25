@@ -30,6 +30,9 @@
   margin-bottom: 16px;
 }
 
+.cemucad-footer {
+  margin-bottom: 12px;
+}
 
 .footer a:hover {
   color: var(--cor-0);

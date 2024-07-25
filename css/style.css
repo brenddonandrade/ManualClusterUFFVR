@@ -20,5 +20,10 @@
 @import "./manual/selecionar-cluster.css";
 @import "./manual/manual-cluster.css";
 
+
+/* sitemas */
+@import "./sistemas/systemContent.css";
+
+
 /* termos e condicoes */
 @import "./termos/termos.css";
