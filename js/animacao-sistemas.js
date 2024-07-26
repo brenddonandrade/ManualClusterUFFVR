@@ -1,14 +1,29 @@
 export default function initAccordionSistemas() {
     const accordionListSistemas = document.querySelectorAll('.sistemas');
-    // console.log(accordionListSistemas);
     if (accordionListSistemas.length) {
         //verifica se existe pora nao bugar o js
-        accordionListSistemas[0].classList.add('ativo');
-        accordionListSistemas[0].nextElementSibling.classList.add('ativo');
+        const firstItem = accordionListSistemas[0];
+        firstItem.classList.add('ativo');
+        const itemAtivo = firstItem.dataset.select;
+        const item = document.getElementById(itemAtivo)
+        item.classList.add('ativo');
 
         function activeAccordion(event) {
-            this.classList.toggle('ativo');
-            this.nextElementSibling.classList.toggle('ativo');
+            accordionListSistemas.forEach(elemento => {
+                if (elemento.classList.contains('ativo')) {
+                    elemento.classList.remove('ativo');
+                    let itemSelect = elemento.dataset.select;
+                    let item = document.getElementById(itemSelect);
+                    item.classList.remove('ativo');
+                }
+
+            });
+            this.classList.add('ativo');
+            let itemSelect = this.dataset.select;
+            console.log(itemSelect);
+            let item = document.getElementById(itemSelect);
+            item.classList.add('ativo');
+
         }
 
         accordionListSistemas.forEach((item) => {
