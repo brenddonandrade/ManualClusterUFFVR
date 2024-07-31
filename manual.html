@@ -33,7 +33,7 @@
           <li><a href="./storage.html">Storage</a></li>
           <li><a href="./software.html">Software</a></li>
           <li><a href="./Contas.html">Contas</a></li>
-          <li><a class="botao" href="./index.html">Home</a></li>
+          <li><a class="botao" href="./contato.html">Contato</a></li>
         </ul>
       </nav>
     </div>
@@ -42,41 +42,70 @@
   <main>
 
     <section class="selecionar-cluster container fadeInDown" data-anime="200" id="selection-cluster" aria-label="Nossos Clusters">
-      <h1 class="font-1-xxl cor-12">Manual | CEMUCAD</h1>
+      <h1 class="font-1-xxl cor-12">Sistemas | CEMUCAD</h1>
       <h2 class="font-1-xl">Selecione sua máquina:</h2>
 
       <div class="selecionar-cluster-content">
-        <div class="item-selecionar">
-          <a class="font-1-l cor-10" href="./manualMoore.html">Moore</a>
+        <div class="item-selecionar sistemas" data-select="manualMoore">
+          <p class="font-1-l cor-10" >Moore</p>
         </div>
-        <div class="item-selecionar">
-          <a class="font-1-l cor-10 " href="./manualMurilinho.html">Murilinho</a>
-        </div>
-
-
-        <div class="item-selecionar">
-          <a class="font-1-l cor-10 " href="./manualTuring.html">Turing</a>
-        </div>
-        <div class="item-selecionar">
-          <a class="font-1-l cor-10 " href="./manualMildred.html">Mildred</a>
+        <div class="item-selecionar sistemas" data-select="manualMurilinho">
+          <p class="font-1-l cor-10">Murilinho</p>
         </div>
 
 
-
-        <div class="item-selecionar">
-          <a class="font-1-l cor-10 " href="./manualHeun.html">Heun</a>
+        <div class="item-selecionar sistemas"  data-select="manualTuring"> 
+          <p class="font-1-l cor-10 ">Turing</p>
         </div>
-        <div class="item-selecionar">
-          <a class="font-1-l cor-10 " href="./manualSpace.html"></a>
+        <div class="item-selecionar sistemas"  data-select="manualMildred">
+          <p class="font-1-l cor-10 ">Mildred</p>
+        </div>
+
+
+
+        <div class="item-selecionar sistemas"  data-select="manualHeun">
+          <p class="font-1-l cor-10  ">Heun</p>
+        </div>
+        <div class="item-selecionar sistemas" data-select="manualSpace">
+          <p class="font-1-l cor-10  " ></p>
         </div>
 
       </div>
 
     </section>
 
+    <section class="systemContent container manual-cluster js-accoridon fadeInDown" data-anime="400" id="manualMoore">
+      <div class="manual-container container">
+        <h1 class="font-1-xl cor-c12 ">Manual Moore</h1>
 
-    
+        <dl class="js-accoridon">
+          <div class="script">
+            <dt class="font-1-l cor-c10">Jobs paralelos (MPI)</dt>
+            <dd>
+              <pre class="font-2-l-a cor-9 fadeInDown" data-anime="400" id="textoParaCopiar">
+#!/bin/bash
+#SBATCH --nodes=N                      #Numero de Nós
+#SBATCH --ntasks-per-node=TPN          #Numero de tarefas por Nó
+#SBATCH --ntasks=T                     #Numero total de tarefas MPI
+#SBATCH -p FILA                        #Fila (partition) a ser utilizada
+#SBATCH -J JOB			       #Nome job
+#SBATCH --exclusive                    #Utilização exclusiva dos nós durante a execução do job
 
+#Exibe os nós alocados para o Job
+echo $SLURM_JOB_NODELIST
+nodeset -e $SLURM_JOB_NODELIST
+
+cd $SLURM_SUBMIT_DIR
+
+
+              </pre>
+              <button class="botaoCopiar">Copiar</button>
+            </dd>
+          </div>
+
+        </dl>
+      </div>
+    </section>
   </main>
 
 

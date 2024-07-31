@@ -1,0 +1,58 @@
+.storageContent {
+    display: none;
+}
+
+
+.storageContent.ativo {
+    display: block;
+    padding: 16px;
+    border: 4px solid var(--cor-4);
+    margin-bottom: 32px;
+    animation: slideDown .8s forwards;
+    position: relative;
+    height: auto;
+    overflow: auto;
+}
+
+
+
+.storageConfig {
+    border-left: 4px solid var(--cor-4);
+    padding: 16px 32px;
+    background-color: var(--cor-2);
+}
+
+.item-selecionar.ativo {
+    background-color: var(--cor-10);
+}
+
+.item-selecionar.ativo p {
+    color: var(--cor-1);
+}
+
+.item-selecionar p {
+    display: inline-block;
+    padding: 12px 18px;
+    cursor: pointer;
+}
+
+.item-selecionar.ativo p:hover {
+    color: var(--cor-3);
+}
+
+.item-selecionar p:hover {
+    color: var(--cor-8);
+}
+
+
+.storageContent h2 {
+    margin-bottom: 16px;
+}
+
+
+@media (max-width: 800px) {
+
+    .storageContent.ativo {
+        grid-template-columns: 1fr;
+    }
+}

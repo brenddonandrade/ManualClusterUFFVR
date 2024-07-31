@@ -24,6 +24,8 @@
 /* sitemas */
 @import "./sistemas/systemContent.css";
 
+/* storage */
+@import "./storage/storage.css";
 
 /* termos e condicoes */
 /* @import "./termos/termos.css"; */
