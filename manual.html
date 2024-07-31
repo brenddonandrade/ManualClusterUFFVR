@@ -29,6 +29,7 @@
       <nav aria-label="primaria">
         <ul class="header-menu font-2-m cor-10">
           
+          <li><a href="./index.html">Início</a></li>
           <li><a href="./sistemas.html">Sistemas</a></li>
           <li><a href="./storage.html">Storage</a></li>
           <li><a href="./software.html">Software</a></li>
@@ -74,15 +75,59 @@
 
     </section>
 
-    <section class="systemContent container manual-cluster js-accoridon fadeInDown" data-anime="400" id="manualMoore">
-      <div class="manual-container container">
-        <h1 class="font-1-xl cor-c12 ">Manual Moore</h1>
+    <section class="container js-accoridon fadeInDown" data-anime="400" id="manualMoore">
+      <div class="manual-container">
+        <h1 class="font-1-xxl cor-c12 ">Manual Moore</h1>
 
         <dl class="js-accoridon">
           <div class="script">
-            <dt class="font-1-l cor-c10">Jobs paralelos (MPI)</dt>
+            <dt class="font-1-xl cor-c10">Jobs paralelos (MPI)</dt>
             <dd>
-              <pre class="font-2-l-a cor-9 fadeInDown" data-anime="400" id="textoParaCopiar">
+              <pre class="font-2-l cor-9 fadeInDown" data-anime="400">
+#!/bin/bash
+#SBATCH --nodes=N                      #Numero de Nós
+#SBATCH --ntasks-per-node=TPN          #Numero de tarefas por Nó
+#SBATCH --ntasks=T                     #Numero total de tarefas MPI
+#SBATCH -p FILA                        #Fila (partition) a ser utilizada
+#SBATCH -J JOB			       #Nome job
+#SBATCH --exclusive                    #Utilização exclusiva dos nós durante a execução do job
+
+#Exibe os nós alocados para o Job
+echo $SLURM_JOB_NODELIST
+nodeset -e $SLURM_JOB_NODELIST
+
+cd $SLURM_SUBMIT_DIR
+
+
+              </pre>
+              <button class="botaoCopiar">Copiar</button>
+            </dd>
+
+            <dt class="font-1-xl cor-c10">Jobs paralelos (OpenMP)</dt>
+            <dd>
+              <pre class="font-2-l cor-9 fadeInDown" data-anime="400">
+#!/bin/bash
+#SBATCH --nodes=N                      #Numero de Nós
+#SBATCH --ntasks-per-node=TPN          #Numero de tarefas por Nó
+#SBATCH --ntasks=T                     #Numero total de tarefas MPI
+#SBATCH -p FILA                        #Fila (partition) a ser utilizada
+#SBATCH -J JOB			       #Nome job
+#SBATCH --exclusive                    #Utilização exclusiva dos nós durante a execução do job
+
+#Exibe os nós alocados para o Job
+echo $SLURM_JOB_NODELIST
+nodeset -e $SLURM_JOB_NODELIST
+
+cd $SLURM_SUBMIT_DIR
+
+
+              </pre>
+              <button class="botaoCopiar">Copiar</button>
+            </dd>
+
+            <dt class="font-1-xl cor-c10">Jobs paralelos (Hibrido)</dt>
+            <dd>
+              <pre class="font-2-l cor-9 fadeInDown" data-anime="400">
 #!/bin/bash
 #SBATCH --nodes=N                      #Numero de Nós
 #SBATCH --ntasks-per-node=TPN          #Numero de tarefas por Nó
