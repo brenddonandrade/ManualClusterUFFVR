@@ -20,6 +20,10 @@
     justify-self: start;
 }
 
+.item-parceiro {
+    justify-self: center;
+}
+
 .img-parceiro {
     justify-self: center;
     align-self: center;
@@ -44,7 +48,8 @@
 
     .parceiros {
         grid-template-columns: 1fr;
-        justify-content: center;
+        gap: 32px 0px;
+
     }
 
     .parceiros h2 {

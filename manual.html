@@ -8,8 +8,7 @@
   <title>CEMUCAD | Manual</title>
   <meta name="description" content="Bicicletas elétricas de alta precisão e qualidade, feitas sob medida para você. Explore o mundo na sua velocidade com a Bikcraft.">
 
-  <!-- <link rel="stylesheet" href="./css/style.min.css"> -->
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">  <link rel="stylesheet" href="./css/style.css">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -101,12 +100,12 @@ cd $SLURM_SUBMIT_DIR
 
 
               </pre>
-              <button class="botaoCopiar">Copiar</button>
+              <span class="botaoCopiar font-2-m">Copiar</span>
             </dd>
 
             <dt class="font-1-xl cor-c10">Jobs paralelos (OpenMP)</dt>
             <dd>
-              <pre class="font-2-l cor-9 fadeInDown" data-anime="400">
+              <pre class="codigo font-2-l cor-9 fadeInDown" data-anime="400">
 #!/bin/bash
 #SBATCH --nodes=N                      #Numero de Nós
 #SBATCH --ntasks-per-node=TPN          #Numero de tarefas por Nó
@@ -123,7 +122,7 @@ cd $SLURM_SUBMIT_DIR
 
 
               </pre>
-              <button class="botaoCopiar">Copiar</button>
+              <span class="botaoCopiar font-2-m">Copiar</span>
             </dd>
 
             <dt class="font-1-xl cor-c10">Jobs paralelos (Hibrido)</dt>
@@ -145,7 +144,7 @@ cd $SLURM_SUBMIT_DIR
 
 
               </pre>
-              <button class="botaoCopiar">Copiar</button>
+              <span class="botaoCopiar font-2-m">Copiar</span>
             </dd>
           </div>
 

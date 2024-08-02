@@ -1,12 +1,20 @@
 export default function initCopiar() {
     document.addEventListener('DOMContentLoaded', () => {
-        const scripts = document.querySelectorAll('.script');
-        const buttons = document.querySelectorAll('.botaoCopiar');
+        const scripts = document.querySelectorAll('.codigo');
+        const spans = document.querySelectorAll('.botaoCopiar');
 
-        buttons.forEach((button, index) => {
-            button.addEventListener('click', () => {
+        spans.forEach((span, index) => {
+            span.addEventListener('click', () => {
                 copyToClipboard(scripts[index].innerText);
+                var originalText = span.textContent;
+                span.innerText = 'Copiado!';
+
+                setTimeout(() => {
+                    span.innerText = originalText;
+                }, 3000);
             });
+
+
         });
 
         function copyToClipboard(text) {
@@ -23,7 +31,7 @@ export default function initCopiar() {
             document.body.removeChild(tempInput);
 
             // Mensagem de confirmação (opcional)
-            alert('Texto copiado para o clipboard!');
+            // alert('Texto copiado para o clipboard!');
         }
     });
 
