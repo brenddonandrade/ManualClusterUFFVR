@@ -1,0 +1,69 @@
+Conteúdo do Curso:
+
+1. **Revisão de Conceitos Básicos**
+   - Recapitulação dos conceitos e comandos básicos.
+   - Relembrando manipulação de arquivos e diretórios, permissões, e scripts simples.
+
+2. **Scripts Avançados**
+   - Estruturas de controle avançadas (`case`, loops aninhados).
+   - Funções em scripts: definição e uso.
+   - Debugging de scripts (`set -x`, `trap`).
+
+3. **Manipulação Avançada de Texto**
+   - Uso avançado do `sed` para edição de streams de texto.
+   - `awk` para processamento e análise de texto.
+   - Expressões regulares avançadas.
+
+4. **Gerenciamento Avançado de Processos**
+   - Gerenciamento de jobs e processos em segundo plano.
+   - Uso de `nohup`, `disown`.
+   - Prioridades de processos (`nice`, `renice`).
+
+5. **Programação Orientada a Objetos em Shell**
+   - Conceitos básicos de programação orientada a objetos no contexto do shell scripting.
+   - Implementação de classes e objetos.
+
+6. **Interação com Banco de Dados**
+   - Conexão e interação com bancos de dados (ex. MySQL, PostgreSQL) via linha de comando.
+   - Uso de ferramentas como `sqlplus`, `mysql`.
+
+7. **Automatização e Tarefas Agendadas**
+   - Criação de cron jobs avançados.
+   - Uso de `at` e `batch`.
+
+8. **Manipulação de Arquivos e Dados Binários**
+   - Comandos para manipulação de arquivos binários (`xxd`, `hexdump`).
+   - Conversão entre diferentes formatos de dados.
+
+9. **Uso de Ferramentas Avançadas do Shell**
+   - `tmux` e `screen` para gerenciamento de sessões.
+   - `git` para controle de versão via linha de comando.
+   - Ferramentas de compressão e arquivamento avançadas (`tar`, `gzip`, `bzip2`, `xz`).
+
+10. **Segurança e Shell**
+    - Criação e uso de chaves SSH.
+    - Configuração de firewalls (`iptables`, `ufw`).
+    - Verificação de integridade de arquivos (`sha256sum`, `md5sum`).
+
+11. **Desenvolvimento e Manutenção de Shell Environments**
+    - Customização do shell (bash, zsh) com temas e plugins.
+    - Uso avançado de dotfiles para personalização e configuração.
+    - Alias, variáveis de ambiente, e inicialização do shell (`.bashrc`, `.bash_profile`, `.zshrc`).
+
+12. **Monitoramento e Logging**
+    - Monitoramento de sistema e recursos (`sar`, `vmstat`, `iostat`).
+    - Ferramentas de log e análise (`logrotate`, `journalctl`).
+
+13. **Scripting para Administração de Sistemas**
+    - Scripts para backup e recuperação de dados.
+    - Automação de tarefas de administração de sistemas.
+    - Gerenciamento de usuários e grupos via scripts.
+
+14. **Integração com Outras Linguagens**
+    - Chamadas a scripts Python, Perl, etc., a partir do shell.
+    - Uso de `expect` para automação de interações com programas.
+
+15. **Boas Práticas e Estudo de Casos**
+    - Escrevendo scripts robustos e portáveis.
+    - Estudos de casos reais de uso de scripts avançados.
+

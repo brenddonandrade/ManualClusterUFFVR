@@ -1,0 +1,47 @@
+Conteúdo do curso:
+
+1. **Introdução ao Linux e ao Shell**
+   - O que é Linux?
+   - O que é o shell?
+   - Diferença entre terminal, console e shell.
+
+2. **Comandos Básicos do Shell**
+   - Navegação pelo sistema de arquivos (`ls`, `cd`, `pwd`).
+   - Manipulação de arquivos e diretórios (`cp`, `mv`, `rm`, `mkdir`, `rmdir`).
+   - Visualização de conteúdo de arquivos (`cat`, `more`, `less`, `head`, `tail`).
+   - Uso de pipes e redirecionamento (`|`, `>`, `>>`, `<`).
+
+3. **Permissões de Arquivo e Usuários**
+   - Conceito de usuários e grupos.
+   - Comandos de permissão (`chmod`, `chown`, `chgrp`).
+   - Visualização e modificação de permissões (`ls -l`).
+
+4. **Edição de Arquivos**
+   - Introdução ao `nano` e ao `vim` (ou outro editor de texto preferido).
+
+5. **Trabalhando com Processos**
+   - Visualização de processos (`ps`, `top`, `htop`).
+   - Controle de processos (`kill`, `pkill`, `jobs`, `bg`, `fg`, `&`).
+
+6. **Gerenciamento de Pacotes**
+   - Instalação e remoção de pacotes (introdução a gerenciadores de pacotes como `apt`, `yum`, `dnf`).
+
+7. **Automatização de Tarefas com Scripts**
+   - Introdução à criação de scripts bash.
+   - Estrutura básica de um script (`#!/bin/bash`).
+   - Variáveis, loops (`for`, `while`), e condicionais (`if`, `else`).
+
+8. **Rede e Conectividade**
+   - Configuração de rede básica (`ifconfig`, `ip`, `ping`).
+   - Transferência de arquivos (`scp`, `rsync`).
+
+9. **Uso de Ferramentas Comuns no Shell**
+   - `grep`, `awk`, `sed` para manipulação de texto.
+   - `find`, `locate` para busca de arquivos.
+
+10. **Acessando e Utilizando um Cluster Remotamente**
+    - Conexão via SSH (`ssh`).
+    - Copia de arquivos entre máquinas (`scp`, `rsync`).
+    - Introdução ao uso de aliases e funções personalizadas no shell para otimizar o trabalho no cluster.
+
+Estes tópicos darão aos usuários uma base sólida no uso do shell Linux, preparando-os para futuros cursos mais avançados sobre Warewulf e Slurm.

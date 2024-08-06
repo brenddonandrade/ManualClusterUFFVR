@@ -1,0 +1,76 @@
+Conteúdo do curso:
+
+1. **Revisão e Melhores Práticas Avançadas**
+   - Recapitulação de scripts avançados.
+   - Boas práticas em scripting: estilo, legibilidade, e manutenção.
+
+2. **Programação Funcional no Shell**
+   - Conceitos de programação funcional.
+   - Aplicação de técnicas funcionais em scripts shell.
+
+3. **Desempenho e Otimização**
+   - Análise de desempenho de scripts.
+   - Ferramentas de profiling (`time`, `strace`, `perf`).
+   - Técnicas de otimização: minimização de forks, uso eficiente de pipelines, e comandos built-in.
+
+4. **Gerenciamento Avançado de Configurações**
+   - Uso de Ansible, Puppet, ou Chef via shell scripting.
+   - Automação de configuração de sistemas e aplicativos.
+
+5. **Automação de Deploy e Integração Contínua**
+   - Scripts para automação de deploy (CI/CD pipelines).
+   - Integração com ferramentas como Jenkins, GitLab CI, e Travis CI.
+
+6. **Manipulação Avançada de Dados e Arquivos**
+   - Processamento de grandes volumes de dados.
+   - Técnicas avançadas com `sed`, `awk`, e `jq` para JSON.
+   - Parsing e manipulação de XML com `xmlstarlet`.
+
+7. **Desenvolvimento de Ferramentas Personalizadas**
+   - Criação de comandos customizados.
+   - Empacotamento de scripts como utilitários de linha de comando.
+
+8. **Integração com APIs e Serviços Web**
+   - Uso de `curl` e `wget` para interagir com APIs RESTful.
+   - Autenticação e manejo de tokens de API.
+   - Processamento de respostas JSON/XML.
+
+9. **Shell Scripting para Segurança**
+   - Scripts para monitoramento e auditoria de segurança.
+   - Automação de tarefas de hardening de sistemas.
+   - Detecção e resposta a incidentes.
+
+10. **Virtualização e Contêineres**
+    - Gerenciamento de máquinas virtuais e contêineres (Docker, Podman) via shell.
+    - Automação de deployments em ambientes virtualizados.
+    - Integração com ferramentas de orquestração (Kubernetes).
+
+11. **Técnicas Avançadas de Log e Monitoramento**
+    - Análise e monitoramento de logs em tempo real.
+    - Scripts para alerta e notificações.
+    - Integração com sistemas de monitoramento como Prometheus e Grafana.
+
+12. **Automação Complexa de Redes**
+    - Scripts para configuração de redes complexas.
+    - Automação de tarefas de rede com `iptables`, `iproute2`, e `netplan`.
+    - Monitoramento e troubleshooting avançado de redes.
+
+13. **Gerenciamento Avançado de Sistemas**
+    - Scripts para gerenciamento de clusters e sistemas distribuídos.
+    - Automação de tarefas de manutenção e monitoramento de clusters.
+
+14. **Segurança Avançada e Auditoria**
+    - Criação de scripts para auditoria de segurança.
+    - Automação de resposta a incidentes de segurança.
+    - Implementação de políticas de segurança automatizadas.
+
+15. **Estudos de Casos e Projetos Reais**
+    - Análise de scripts avançados usados em ambientes de produção.
+    - Projetos práticos que abordam cenários reais complexos.
+    - Discussão de desafios e soluções em projetos de shell scripting avançado.
+
+### Metodologia
+- **Aulas Teóricas e Práticas**: Combinação de teoria e prática com exemplos reais e exercícios práticos.
+- **Projetos e Estudos de Caso**: Projetos que simulem situações reais encontradas em ambientes de produção.
+- **Sessões de Code Review**: Análise e revisão colaborativa de scripts para promover boas práticas e otimizações.
+- **Laboratórios e Workshops**: Sessões interativas para resolução de problemas complexos e aplicação de conceitos avançados.
