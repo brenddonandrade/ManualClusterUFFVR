@@ -36,3 +36,14 @@ img {
 [src$=".jpg"] {
   border-radius: 4px;
 }
+
+.construcao {
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  height: 60vh;
+}
+
+.construcao h1 {
+  max-width: 20ch;
+}
