@@ -27,5 +27,9 @@
 /* storage */
 @import "./storage/storage.css";
 
+
+/* sobre */
+@import "./sobre/sobre.css";
+
 /* termos e condicoes */
 /* @import "./termos/termos.css"; */
