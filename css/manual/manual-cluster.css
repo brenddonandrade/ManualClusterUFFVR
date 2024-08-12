@@ -1,6 +1,11 @@
 /* Correcoes */
 
 .manual-container {
+    display: none;
+}
+
+.manual-container.ativo {
+    display: block;
     padding: 16px;
     border: 4px solid var(--cor-4);
     margin-bottom: 32px;
