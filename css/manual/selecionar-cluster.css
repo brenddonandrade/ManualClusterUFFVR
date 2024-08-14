@@ -6,7 +6,7 @@
     grid-column: span 4;
 }
 
-.selecionar-cluster h2 {
+.selecionar-cluster h3 {
     grid-column: span 4;
     margin-bottom: 32px;
 }

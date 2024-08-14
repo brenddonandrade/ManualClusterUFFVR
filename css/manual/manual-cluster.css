@@ -15,6 +15,11 @@
     margin-bottom: 30px;
 }
 
+.acessoInicialContent p {
+    width: 80ch;
+}
+
+
 .script {
     padding: 16px;
 }
@@ -28,6 +33,7 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
+    cursor: pointer;
 }
 
 .script dt::after {
