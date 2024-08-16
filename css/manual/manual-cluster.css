@@ -11,6 +11,11 @@
     margin-bottom: 32px;
 }
 
+.manual-container.acesso-inicial {
+    border: none;
+}
+
+
 .manual-cluster h1 {
     margin-bottom: 30px;
 }
@@ -19,6 +24,16 @@
     width: 80ch;
 }
 
+.acessoInicialContent .img-wraper {
+    max-width: 360px;
+    height: auto;
+}
+
+
+.acessoInicialContent .img-wraper img{
+    width: 100%;
+    margin-bottom: 12px;
+}
 
 .script {
     padding: 16px;

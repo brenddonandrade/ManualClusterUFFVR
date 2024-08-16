@@ -1,365 +1,456 @@
 <!DOCTYPE html>
 
 <html lang="pt-br">
-
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CEMUCAD | Manual</title>
-  <meta name="description" content="Bicicletas elétricas de alta precisão e qualidade, feitas sob medida para você. Explore o mundo na sua velocidade com a Bikcraft.">
-
-  <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">  <link rel="stylesheet" href="./css/style.css">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-
-  
-  
-  <script>
-    document.documentElement.classList.add('js');
-  </script>
-</head>
-
-<body id="manual">
-  <header class="container">
-    <div class="header">
-      <a href="./"><img src="./img/home/CEMUCAD.svg" width="136" height="32" alt="Cemucad"></a>
-      <nav aria-label="primaria">
-        <ul class="header-menu font-2-m cor-10">
-          
-          <li><a href="./index.html">Início</a></li>
-          <li><a href="./sistemas.html">Sistemas</a></li>
-          <li><a href="./storage.html">Storage</a></li>
-          <li><a href="./software.html">Software</a></li>
-          <li><a href="./sobre.html">Sobre</a></li>
-          <li><a href="./indicadores.html">Indicadores</a></li>
-          <li><a href="./treinamento.html">Treinamentos</a></li>          <li><a class="botao" href="./contato.html">Contato</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-
-    <section class="selecionar-cluster container fadeInDown" data-anime="200" id="selection-cluster" aria-label="Nossos Clusters">
-      <h1 class="font-1-xxl cor-12">Sistemas | CEMUCAD</h1>
-      <h3 class="font-1-xl">Selecione sua máquina:</h3>
-
-      <div class="selecionar-cluster-content">
-        <div class="item-selecionar sistemas" data-select="manualAcessoInicial">
-          <p class="font-1-l cor-10" >Acesso Inicial</p>
-        </div>
-        <div class="item-selecionar sistemas" data-select="manualMoore">
-          <p class="font-1-l cor-10" >Moore</p>
-        </div>
-        <div class="item-selecionar sistemas" data-select="manualMurilinho">
-          <p class="font-1-l cor-10">Murilinho</p>
-        </div>
-
-
-        <div class="item-selecionar sistemas"  data-select="manualTuring"> 
-          <p class="font-1-l cor-10 ">Turing</p>
-        </div>
-        <div class="item-selecionar sistemas"  data-select="manualMildred">
-          <p class="font-1-l cor-10 ">Mildred</p>
-        </div>
-
-
-
-        <div class="item-selecionar sistemas"  data-select="manualHeun">
-          <p class="font-1-l cor-10  ">Heun</p>
-        </div>
-        <div class="item-selecionar sistemas" data-select="manualSpace">
-          <p class="font-1-l cor-10  " ></p>
-        </div>
-
-      </div>
-
-    </section>
-
-    <section class="manual-container container fadeInDown" data-anime="400" id="manualAcessoInicial">
-      <div class="acessoInicialContent">
-        <h2 class="font-1-xxl cor-c12 ">Acesso Inicial</h2>
-        <p class="font-2-s cor-9">Este manual tem o objetivo de descrever como se deve acessar os <strong>Clusters</strong> a partir de um acesso externo a rede.</p>
-
-        <ol class="js-accoridon">
-          <li class="font-1-xl cor-c10">Instalação das Ferramentas Necessárias</li>
-          
-        </ol>
-      </div>
-    </section>
-
-    <section class="manual-container container fadeInDown" data-anime="400" id="manualMoore">
-      <div>
-        <h2 class="font-1-xxl cor-c12 ">Manual Moore</h2>
-        <p class="font-2-s cor-9">Este manual tem o objetivo de descrever como se deve subter  "jobs" ao cluster <strong>Moore</strong>.</p>
-
-        <dl class="js-accoridon">
-          <div class="script">
-            <dt class="font-1-xl cor-c10">Jobs paralelos (MPI)</dt>
-            <dd>
-              <pre class="font-2-l cor-9 fadeInDown" data-anime="400">
-#!/bin/bash
-#SBATCH --nodes=N                      #Numero de Nós
-#SBATCH --ntasks-per-node=TPN          #Numero de tarefas por Nó
-#SBATCH --ntasks=T                     #Numero total de tarefas MPI
-#SBATCH -p FILA                        #Fila (partition) a ser utilizada
-#SBATCH -J JOB			       #Nome job
-#SBATCH --exclusive                    #Utilização exclusiva dos nós durante a execução do job
-
-#Exibe os nós alocados para o Job
-echo $SLURM_JOB_NODELIST
-nodeset -e $SLURM_JOB_NODELIST
-
-cd $SLURM_SUBMIT_DIR
-
-
-              </pre>
-              <span class="botaoCopiar font-2-m">Copiar</span>
-            </dd>
-
-            <dt class="font-1-xl cor-c10">Jobs paralelos (OpenMP)</dt>
-            <dd>
-              <pre class="codigo font-2-l cor-9 fadeInDown" data-anime="400">
-#!/bin/bash
-#SBATCH --nodes=N                      #Numero de Nós
-#SBATCH --ntasks-per-node=TPN          #Numero de tarefas por Nó
-#SBATCH --ntasks=T                     #Numero total de tarefas MPI
-#SBATCH -p FILA                        #Fila (partition) a ser utilizada
-#SBATCH -J JOB			       #Nome job
-#SBATCH --exclusive                    #Utilização exclusiva dos nós durante a execução do job
-
-#Exibe os nós alocados para o Job
-echo $SLURM_JOB_NODELIST
-nodeset -e $SLURM_JOB_NODELIST
-
-cd $SLURM_SUBMIT_DIR
-
-
-              </pre>
-              <span class="botaoCopiar font-2-m">Copiar</span>
-            </dd>
-
-            <dt class="font-1-xl cor-c10">Jobs paralelos (Hibrido)</dt>
-            <dd>
-              <pre class="font-2-l cor-9 fadeInDown" data-anime="400">
-#!/bin/bash
-#SBATCH --nodes=N                      #Numero de Nós
-#SBATCH --ntasks-per-node=TPN          #Numero de tarefas por Nó
-#SBATCH --ntasks=T                     #Numero total de tarefas MPI
-#SBATCH -p FILA                        #Fila (partition) a ser utilizada
-#SBATCH -J JOB			       #Nome job
-#SBATCH --exclusive                    #Utilização exclusiva dos nós durante a execução do job
-
-#Exibe os nós alocados para o Job
-echo $SLURM_JOB_NODELIST
-nodeset -e $SLURM_JOB_NODELIST
-
-cd $SLURM_SUBMIT_DIR
-
-
-              </pre>
-              <span class="botaoCopiar font-2-m">Copiar</span>
-            </dd>
-          </div>
-
-        </dl>
-      </div>
-    </section>
-
-    <section class="manual-container container fadeInDown" data-anime="400" id="manualMurilinho">
-      <div>
-        <h2 class="font-1-xxl cor-c12 ">Manual Murilinho</h2>
-
-        <dl class="js-accoridon">
-          <div class="script">
-            <dt class="font-1-xl cor-c10">Jobs paralelos (MPI)</dt>
-            <dd>
-              <pre class="font-2-l cor-9 fadeInDown" data-anime="400">
-#!/bin/bash
-#SBATCH --nodes=N                      #Numero de Nós
-#SBATCH --ntasks-per-node=TPN          #Numero de tarefas por Nó
-#SBATCH --ntasks=T                     #Numero total de tarefas MPI
-#SBATCH -p FILA                        #Fila (partition) a ser utilizada
-#SBATCH -J JOB			       #Nome job
-#SBATCH --exclusive                    #Utilização exclusiva dos nós durante a execução do job
-
-#Exibe os nós alocados para o Job
-echo $SLURM_JOB_NODELIST
-nodeset -e $SLURM_JOB_NODELIST
-
-cd $SLURM_SUBMIT_DIR
-
-
-              </pre>
-              <span class="botaoCopiar font-2-m">Copiar</span>
-            </dd>
-
-            <dt class="font-1-xl cor-c10">Jobs paralelos (OpenMP)</dt>
-            <dd>
-              <pre class="codigo font-2-l cor-9 fadeInDown" data-anime="400">
-#!/bin/bash
-#SBATCH --nodes=N                      #Numero de Nós
-#SBATCH --ntasks-per-node=TPN          #Numero de tarefas por Nó
-#SBATCH --ntasks=T                     #Numero total de tarefas MPI
-#SBATCH -p FILA                        #Fila (partition) a ser utilizada
-#SBATCH -J JOB			       #Nome job
-#SBATCH --exclusive                    #Utilização exclusiva dos nós durante a execução do job
-
-#Exibe os nós alocados para o Job
-echo $SLURM_JOB_NODELIST
-nodeset -e $SLURM_JOB_NODELIST
-
-cd $SLURM_SUBMIT_DIR
-
-
-              </pre>
-              <span class="botaoCopiar font-2-m">Copiar</span>
-            </dd>
-
-            <dt class="font-1-xl cor-c10">Jobs paralelos (Hibrido)</dt>
-            <dd>
-              <pre class="font-2-l cor-9 fadeInDown" data-anime="400">
-#!/bin/bash
-#SBATCH --nodes=N                      #Numero de Nós
-#SBATCH --ntasks-per-node=TPN          #Numero de tarefas por Nó
-#SBATCH --ntasks=T                     #Numero total de tarefas MPI
-#SBATCH -p FILA                        #Fila (partition) a ser utilizada
-#SBATCH -J JOB			       #Nome job
-#SBATCH --exclusive                    #Utilização exclusiva dos nós durante a execução do job
-
-#Exibe os nós alocados para o Job
-echo $SLURM_JOB_NODELIST
-nodeset -e $SLURM_JOB_NODELIST
-
-cd $SLURM_SUBMIT_DIR
-
-
-              </pre>
-              <span class="botaoCopiar font-2-m">Copiar</span>
-            </dd>
-          </div>
-
-        </dl>
-      </div>
-    </section>
-
-    <section class="manual-container container fadeInDown" data-anime="400" id="manualHeun">
-      <div>
-        <h2 class="font-1-xxl cor-c12 ">Manual Heun</h2>
-
-        <dl class="js-accoridon">
-          <div class="script">
-            <dt class="font-1-xl cor-c10">Jobs paralelos (MPI)</dt>
-            <dd>
-              <pre class="font-2-l cor-9 fadeInDown" data-anime="400">
-#!/bin/bash
-#SBATCH --nodes=N                      #Numero de Nós
-#SBATCH --ntasks-per-node=TPN          #Numero de tarefas por Nó
-#SBATCH --ntasks=T                     #Numero total de tarefas MPI
-#SBATCH -p FILA                        #Fila (partition) a ser utilizada
-#SBATCH -J JOB			       #Nome job
-#SBATCH --exclusive                    #Utilização exclusiva dos nós durante a execução do job
-
-#Exibe os nós alocados para o Job
-echo $SLURM_JOB_NODELIST
-nodeset -e $SLURM_JOB_NODELIST
-
-cd $SLURM_SUBMIT_DIR
-
-
-              </pre>
-              <span class="botaoCopiar font-2-m">Copiar</span>
-            </dd>
-
-            <dt class="font-1-xl cor-c10">Jobs paralelos (OpenMP)</dt>
-            <dd>
-              <pre class="codigo font-2-l cor-9 fadeInDown" data-anime="400">
-#!/bin/bash
-#SBATCH --nodes=N                      #Numero de Nós
-#SBATCH --ntasks-per-node=TPN          #Numero de tarefas por Nó
-#SBATCH --ntasks=T                     #Numero total de tarefas MPI
-#SBATCH -p FILA                        #Fila (partition) a ser utilizada
-#SBATCH -J JOB			       #Nome job
-#SBATCH --exclusive                    #Utilização exclusiva dos nós durante a execução do job
-
-#Exibe os nós alocados para o Job
-echo $SLURM_JOB_NODELIST
-nodeset -e $SLURM_JOB_NODELIST
-
-cd $SLURM_SUBMIT_DIR
-
-
-              </pre>
-              <span class="botaoCopiar font-2-m">Copiar</span>
-            </dd>
-
-            <dt class="font-1-xl cor-c10">Jobs paralelos (Hibrido)</dt>
-            <dd>
-              <pre class="font-2-l cor-9 fadeInDown" data-anime="400">
-#!/bin/bash
-#SBATCH --nodes=N                      #Numero de Nós
-#SBATCH --ntasks-per-node=TPN          #Numero de tarefas por Nó
-#SBATCH --ntasks=T                     #Numero total de tarefas MPI
-#SBATCH -p FILA                        #Fila (partition) a ser utilizada
-#SBATCH -J JOB			       #Nome job
-#SBATCH --exclusive                    #Utilização exclusiva dos nós durante a execução do job
-
-#Exibe os nós alocados para o Job
-echo $SLURM_JOB_NODELIST
-nodeset -e $SLURM_JOB_NODELIST
-
-cd $SLURM_SUBMIT_DIR
-
-
-              </pre>
-              <span class="botaoCopiar font-2-m">Copiar</span>
-            </dd>
-          </div>
-
-        </dl>
-      </div>
-    </section>
-  </main>
-
-
-
-
-  <footer class="footer-bg">
-    <div class="container footer">
-      <div>
-        <img class="cemucad-footer" src="./img/home/CEMUCAD-white.svg" width="136" height="32" alt="Cemucad">
-        <a href="https://brenddonandrade.github.io/Portfolio/index.html" target="_blank">
-          <p class="font-2-m cor-8">Criado por Brenddon Oliveira &copy; 2024 . Todos os direitos reservados.</p>
-        </a>
-      </div>
-      <div class="footer-contato">
-        <h3 class="font-2-l-b cor-0">Contato</h3>
-        <ul class="font-2-m cor-5">
-          <li><a href="tel:+552430768700">+55 24 3076-8700</a></li>
-          <li><a href="mailto:contato@oni.com">contato@servidor.com</a></li>
-          <li>R. Des. Ellis Hermydio Figueira, 783 - Aterrado, Volta Redonda, 27213-145.</li>
-          <li>Rio de Janeiro</li>
-        </ul>
-      </div>
-      <div class="footer-irformacoes">
-        <h3 class="font-2-l-b cor-0">Informações</h3>
-        <nav>
-          <ul class="font-1-m cor-5">
-            <li><a href="./index.html">Home</a></li>
-            <li><a href="./contato.html">Contato</a></li>
-            <li><a href="./termos.html">Termos e condições</a></li>
-            <li><a href="#">Retornar ao topo da página</a></li>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CEMUCAD | Manual</title>
+    <meta
+      name="description"
+      content="Bicicletas elétricas de alta precisão e qualidade, feitas sob medida para você. Explore o mundo na sua velocidade com a Bikcraft."
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+  </head>
+
+  <body id="manual">
+    <header class="container">
+      <div class="header">
+        <a href="./"
+          ><img
+            src="./img/home/CEMUCAD.svg"
+            width="136"
+            height="32"
+            alt="Cemucad"
+        /></a>
+        <nav aria-label="primaria">
+          <ul class="header-menu font-2-m cor-10">
+            <li><a href="./index.html">Início</a></li>
+            <li><a href="./sistemas.html">Sistemas</a></li>
+            <li><a href="./storage.html">Storage</a></li>
+            <li><a href="./software.html">Software</a></li>
+            <li><a href="./sobre.html">Sobre</a></li>
+            <li><a href="./indicadores.html">Indicadores</a></li>
+            <li><a href="./treinamento.html">Treinamentos</a></li>
+            <li><a class="botao" href="./contato.html">Contato</a></li>
           </ul>
         </nav>
       </div>
-      
-    </div>
-  </footer>
+    </header>
 
-  <script src="./js/plugins/simple-anime.js"></script>
-  <script type="module" src="./js/script.js"></script>
-</body>
+    <main>
+      <section
+        class="selecionar-cluster container fadeInDown"
+        data-anime="200"
+        id="selection-cluster"
+        aria-label="Nossos Clusters"
+      >
+        <h1 class="font-1-xxl cor-12">Sistemas | CEMUCAD</h1>
+        <h3 class="font-1-xl">Selecione sua máquina:</h3>
 
+        <div class="selecionar-cluster-content">
+          <div
+            class="item-selecionar sistemas"
+            data-select="manualAcessoInicial"
+          >
+            <p class="font-1-l cor-10">Acesso Inicial</p>
+          </div>
+          <div class="item-selecionar sistemas" data-select="manualMoore">
+            <p class="font-1-l cor-10">Moore</p>
+          </div>
+          <div class="item-selecionar sistemas" data-select="manualMurilinho">
+            <p class="font-1-l cor-10">Murilinho</p>
+          </div>
+
+          <div class="item-selecionar sistemas" data-select="manualTuring">
+            <p class="font-1-l cor-10">Turing</p>
+          </div>
+          <div class="item-selecionar sistemas" data-select="manualMildred">
+            <p class="font-1-l cor-10">Mildred</p>
+          </div>
+
+          <div class="item-selecionar sistemas" data-select="manualHeun">
+            <p class="font-1-l cor-10">Heun</p>
+          </div>
+          <div class="item-selecionar sistemas" data-select="manualSpace">
+            <p class="font-1-l cor-10"></p>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="manual-container acesso-inicial container fadeInDown"
+        data-anime="400"
+        id="manualAcessoInicial"
+      >
+        <div class="acessoInicialContent">
+          <h2 class="font-1-xxl cor-c12">Acesso Inicial</h2>
+          <p class="font-2-s cor-9">
+            Este manual tem o objetivo de descrever como se deve acessar os
+            <strong>Clusters</strong> a partir de um acesso externo a rede.
+          </p>
+
+          <ol class="js-accoridon">
+            <li class="font-1-xl cor-c10">
+              Instalação das Ferramentas Necessárias
+            </li>
+            <p class="font-2-s cor-9">
+              Ao acessar um Supercomputador a partir de um ambiente de rede
+              externo, se faz necessário o uso de um VPN (Virtual Private
+              Network) para a conexão a rede interna do computador. A Figura
+              <a href="#network-fig">1.1</a> ilusta como funciona o processo da
+              utilização do VPN, demonstrando que o objetivo é conectar sua
+              máquina pessoal ao <strong>nó mestre</strong> para utilização dos
+              serviços do <strong>cluster</strong>.
+            </p>
+            <div class="img-wraper">
+              <figure id="network-fig">
+                <img src="./img/manual/conexao.png" alt="Rede de um Cluster" />
+                <figcaption>
+                  <strong>Figura 1.1:</strong> Exemplo de conexão de um Cluster.
+                  Fonte:
+                  <a
+                    href="https://medium.com/@edwinmarrima/computa%C3%A7%C3%A3o-em-grelha-e-cluster-f34b8606d8fc"
+                    >Computação em grelha e cluster</a
+                  >.
+                </figcaption>
+              </figure>
+            </div>
+            <p class="font-2-s cor-9">
+              Para a instalação da ferramenta que utilizamos, o Escritório de
+              Segurança da Informação para o Interior - Volta Redonda produziu
+              um material didádico que pode ser requisitado pelo
+              <strong>
+                <a
+                  href="https://drive.google.com/drive/folders/1m8NfjpytCAMA_JDzdA5e6_SXNqi3Sf1V"
+                  >link</a
+                >
+              </strong>
+              . A partir desta ponto, você terá acesso a seção de pastas no
+              google drive, onde selecionará qual
+              <strong>sistema operacional</strong> (Windows, Linux ou Mac) está
+              utilizando e cada um terá um processo diferente de instalação.
+            </p>
+          </ol>
+        </div>
+      </section>
+
+      <section
+        class="manual-container container fadeInDown"
+        data-anime="400"
+        id="manualMoore"
+      >
+        <div>
+          <h2 class="font-1-xxl cor-c12">Manual Moore</h2>
+          <p class="font-2-s cor-9">
+            Este manual tem o objetivo de descrever como se deve subter "jobs"
+            ao cluster <strong>Moore</strong>.
+          </p>
+
+          <dl class="js-accoridon">
+            <div class="script">
+              <dt class="font-1-xl cor-c10">Jobs paralelos (MPI)</dt>
+              <dd>
+                <pre class="font-2-l cor-9 fadeInDown" data-anime="400">
+#!/bin/bash
+#SBATCH --nodes=N                      #Numero de Nós
+#SBATCH --ntasks-per-node=TPN          #Numero de tarefas por Nó
+#SBATCH --ntasks=T                     #Numero total de tarefas MPI
+#SBATCH -p FILA                        #Fila (partition) a ser utilizada
+#SBATCH -J JOB			       #Nome job
+#SBATCH --exclusive                    #Utilização exclusiva dos nós durante a execução do job
+
+#Exibe os nós alocados para o Job
+echo $SLURM_JOB_NODELIST
+nodeset -e $SLURM_JOB_NODELIST
+
+cd $SLURM_SUBMIT_DIR
+
+
+              </pre
+                >
+                <span class="botaoCopiar font-2-m">Copiar</span>
+              </dd>
+
+              <dt class="font-1-xl cor-c10">Jobs paralelos (OpenMP)</dt>
+              <dd>
+                <pre class="codigo font-2-l cor-9 fadeInDown" data-anime="400">
+#!/bin/bash
+#SBATCH --nodes=N                      #Numero de Nós
+#SBATCH --ntasks-per-node=TPN          #Numero de tarefas por Nó
+#SBATCH --ntasks=T                     #Numero total de tarefas MPI
+#SBATCH -p FILA                        #Fila (partition) a ser utilizada
+#SBATCH -J JOB			       #Nome job
+#SBATCH --exclusive                    #Utilização exclusiva dos nós durante a execução do job
+
+#Exibe os nós alocados para o Job
+echo $SLURM_JOB_NODELIST
+nodeset -e $SLURM_JOB_NODELIST
+
+cd $SLURM_SUBMIT_DIR
+
+
+              </pre
+                >
+                <span class="botaoCopiar font-2-m">Copiar</span>
+              </dd>
+
+              <dt class="font-1-xl cor-c10">Jobs paralelos (Hibrido)</dt>
+              <dd>
+                <pre class="font-2-l cor-9 fadeInDown" data-anime="400">
+#!/bin/bash
+#SBATCH --nodes=N                      #Numero de Nós
+#SBATCH --ntasks-per-node=TPN          #Numero de tarefas por Nó
+#SBATCH --ntasks=T                     #Numero total de tarefas MPI
+#SBATCH -p FILA                        #Fila (partition) a ser utilizada
+#SBATCH -J JOB			       #Nome job
+#SBATCH --exclusive                    #Utilização exclusiva dos nós durante a execução do job
+
+#Exibe os nós alocados para o Job
+echo $SLURM_JOB_NODELIST
+nodeset -e $SLURM_JOB_NODELIST
+
+cd $SLURM_SUBMIT_DIR
+
+
+              </pre
+                >
+                <span class="botaoCopiar font-2-m">Copiar</span>
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <section
+        class="manual-container container fadeInDown"
+        data-anime="400"
+        id="manualMurilinho"
+      >
+        <div>
+          <h2 class="font-1-xxl cor-c12">Manual Murilinho</h2>
+
+          <dl class="js-accoridon">
+            <div class="script">
+              <dt class="font-1-xl cor-c10">Jobs paralelos (MPI)</dt>
+              <dd>
+                <pre class="font-2-l cor-9 fadeInDown" data-anime="400">
+#!/bin/bash
+#SBATCH --nodes=N                      #Numero de Nós
+#SBATCH --ntasks-per-node=TPN          #Numero de tarefas por Nó
+#SBATCH --ntasks=T                     #Numero total de tarefas MPI
+#SBATCH -p FILA                        #Fila (partition) a ser utilizada
+#SBATCH -J JOB			       #Nome job
+#SBATCH --exclusive                    #Utilização exclusiva dos nós durante a execução do job
+
+#Exibe os nós alocados para o Job
+echo $SLURM_JOB_NODELIST
+nodeset -e $SLURM_JOB_NODELIST
+
+cd $SLURM_SUBMIT_DIR
+
+
+              </pre
+                >
+                <span class="botaoCopiar font-2-m">Copiar</span>
+              </dd>
+
+              <dt class="font-1-xl cor-c10">Jobs paralelos (OpenMP)</dt>
+              <dd>
+                <pre class="codigo font-2-l cor-9 fadeInDown" data-anime="400">
+#!/bin/bash
+#SBATCH --nodes=N                      #Numero de Nós
+#SBATCH --ntasks-per-node=TPN          #Numero de tarefas por Nó
+#SBATCH --ntasks=T                     #Numero total de tarefas MPI
+#SBATCH -p FILA                        #Fila (partition) a ser utilizada
+#SBATCH -J JOB			       #Nome job
+#SBATCH --exclusive                    #Utilização exclusiva dos nós durante a execução do job
+
+#Exibe os nós alocados para o Job
+echo $SLURM_JOB_NODELIST
+nodeset -e $SLURM_JOB_NODELIST
+
+cd $SLURM_SUBMIT_DIR
+
+
+              </pre
+                >
+                <span class="botaoCopiar font-2-m">Copiar</span>
+              </dd>
+
+              <dt class="font-1-xl cor-c10">Jobs paralelos (Hibrido)</dt>
+              <dd>
+                <pre class="font-2-l cor-9 fadeInDown" data-anime="400">
+#!/bin/bash
+#SBATCH --nodes=N                      #Numero de Nós
+#SBATCH --ntasks-per-node=TPN          #Numero de tarefas por Nó
+#SBATCH --ntasks=T                     #Numero total de tarefas MPI
+#SBATCH -p FILA                        #Fila (partition) a ser utilizada
+#SBATCH -J JOB			       #Nome job
+#SBATCH --exclusive                    #Utilização exclusiva dos nós durante a execução do job
+
+#Exibe os nós alocados para o Job
+echo $SLURM_JOB_NODELIST
+nodeset -e $SLURM_JOB_NODELIST
+
+cd $SLURM_SUBMIT_DIR
+
+
+              </pre
+                >
+                <span class="botaoCopiar font-2-m">Copiar</span>
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <section
+        class="manual-container container fadeInDown"
+        data-anime="400"
+        id="manualHeun"
+      >
+        <div>
+          <h2 class="font-1-xxl cor-c12">Manual Heun</h2>
+
+          <dl class="js-accoridon">
+            <div class="script">
+              <dt class="font-1-xl cor-c10">Jobs paralelos (MPI)</dt>
+              <dd>
+                <pre class="font-2-l cor-9 fadeInDown" data-anime="400">
+#!/bin/bash
+#SBATCH --nodes=N                      #Numero de Nós
+#SBATCH --ntasks-per-node=TPN          #Numero de tarefas por Nó
+#SBATCH --ntasks=T                     #Numero total de tarefas MPI
+#SBATCH -p FILA                        #Fila (partition) a ser utilizada
+#SBATCH -J JOB			       #Nome job
+#SBATCH --exclusive                    #Utilização exclusiva dos nós durante a execução do job
+
+#Exibe os nós alocados para o Job
+echo $SLURM_JOB_NODELIST
+nodeset -e $SLURM_JOB_NODELIST
+
+cd $SLURM_SUBMIT_DIR
+
+
+              </pre
+                >
+                <span class="botaoCopiar font-2-m">Copiar</span>
+              </dd>
+
+              <dt class="font-1-xl cor-c10">Jobs paralelos (OpenMP)</dt>
+              <dd>
+                <pre class="codigo font-2-l cor-9 fadeInDown" data-anime="400">
+#!/bin/bash
+#SBATCH --nodes=N                      #Numero de Nós
+#SBATCH --ntasks-per-node=TPN          #Numero de tarefas por Nó
+#SBATCH --ntasks=T                     #Numero total de tarefas MPI
+#SBATCH -p FILA                        #Fila (partition) a ser utilizada
+#SBATCH -J JOB			       #Nome job
+#SBATCH --exclusive                    #Utilização exclusiva dos nós durante a execução do job
+
+#Exibe os nós alocados para o Job
+echo $SLURM_JOB_NODELIST
+nodeset -e $SLURM_JOB_NODELIST
+
+cd $SLURM_SUBMIT_DIR
+
+
+              </pre
+                >
+                <span class="botaoCopiar font-2-m">Copiar</span>
+              </dd>
+
+              <dt class="font-1-xl cor-c10">Jobs paralelos (Hibrido)</dt>
+              <dd>
+                <pre class="font-2-l cor-9 fadeInDown" data-anime="400">
+#!/bin/bash
+#SBATCH --nodes=N                      #Numero de Nós
+#SBATCH --ntasks-per-node=TPN          #Numero de tarefas por Nó
+#SBATCH --ntasks=T                     #Numero total de tarefas MPI
+#SBATCH -p FILA                        #Fila (partition) a ser utilizada
+#SBATCH -J JOB			       #Nome job
+#SBATCH --exclusive                    #Utilização exclusiva dos nós durante a execução do job
+
+#Exibe os nós alocados para o Job
+echo $SLURM_JOB_NODELIST
+nodeset -e $SLURM_JOB_NODELIST
+
+cd $SLURM_SUBMIT_DIR
+
+
+              </pre
+                >
+                <span class="botaoCopiar font-2-m">Copiar</span>
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer-bg">
+      <div class="container footer">
+        <div>
+          <img
+            class="cemucad-footer"
+            src="./img/home/CEMUCAD-white.svg"
+            width="136"
+            height="32"
+            alt="Cemucad"
+          />
+          <a
+            href="https://brenddonandrade.github.io/Portfolio/index.html"
+            target="_blank"
+          >
+            <p class="font-2-m cor-8">
+              Criado por Brenddon Oliveira &copy; 2024 . Todos os direitos
+              reservados.
+            </p>
+          </a>
+        </div>
+        <div class="footer-contato">
+          <h3 class="font-2-l-b cor-0">Contato</h3>
+          <ul class="font-2-m cor-5">
+            <li><a href="tel:+552430768700">+55 24 3076-8700</a></li>
+            <li><a href="mailto:contato@oni.com">contato@servidor.com</a></li>
+            <li>
+              R. Des. Ellis Hermydio Figueira, 783 - Aterrado, Volta Redonda,
+              27213-145.
+            </li>
+            <li>Rio de Janeiro</li>
+          </ul>
+        </div>
+        <div class="footer-irformacoes">
+          <h3 class="font-2-l-b cor-0">Informações</h3>
+          <nav>
+            <ul class="font-1-m cor-5">
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./contato.html">Contato</a></li>
+              <li><a href="./termos.html">Termos e condições</a></li>
+              <li><a href="#">Retornar ao topo da página</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./js/plugins/simple-anime.js"></script>
+    <script type="module" src="./js/script.js"></script>
+  </body>
 </html>
